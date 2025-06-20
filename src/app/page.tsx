@@ -43,6 +43,7 @@ export default function Home() {
         title={contactAction.title}
         buttonLabel={contactAction.buttonLabel}
         buttonLink={contactAction.link}
+        buttonVariant="light"
         buttonSize="lg"
       />
       <div>
@@ -52,10 +53,10 @@ export default function Home() {
           buttonLabel={servicesAction.buttonLabel}
           buttonLink={servicesAction.link}
           className="text-theme-dark text-left bg-theme-light"
-          buttonVariant= "destructive"
+          buttonVariant="dark"
           buttonSize="lg"
         />
-        <Image src={WorkingImage} alt="" className="w-full brightness-90" />
+        <Image src={WorkingImage} alt="working" className="w-full brightness-90" priority/>
       </div>
       <div className="flex flex-wrap justify-center items-center p-8 bg-light">
         <IconCard

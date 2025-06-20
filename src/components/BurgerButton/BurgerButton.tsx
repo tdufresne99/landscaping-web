@@ -11,7 +11,7 @@ interface BurgerButtonProps {
 
 export default function BurgerButton({ open, className = "", toggle }: BurgerButtonProps) {
   return (
-    <button onClick={toggle} className={`p-2 text-primary text-3xl fixed top-10 right-10 z-50 ${className}`}>
+    <button onClick={toggle} className={`p-2 text-primary text-3xl  ${className}`}>
       <AnimatePresence mode="wait">
         {open ? (
           <motion.div

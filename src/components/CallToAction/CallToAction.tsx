@@ -9,7 +9,7 @@ interface CallToActionProps {
   buttonLabel: string;
   buttonLink: string;
   className?: string;
-  buttonVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  buttonVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | "dark" | "light";
   buttonSize?: "default" | "sm" | "lg" | "icon";
 }
 
