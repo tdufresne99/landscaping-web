@@ -9,9 +9,10 @@ const openButtonPosition = "fixed top-9 right-10 z-50";
 
 interface MobileMenuProps {
   menuItems: { name: string; url: string }[];
+  className?: string;
 }
 
-export default function MobileMenu({ menuItems }: MobileMenuProps) {
+export default function MobileMenu({ menuItems, className }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonPosition, setButtonPosition] = useState(defaultButtonPosition);
 
@@ -24,7 +25,7 @@ export default function MobileMenu({ menuItems }: MobileMenuProps) {
   }, [isOpen]);
 
   return (
-    <div>
+    <div className={`${className}`}>
       <BurgerButton
         className={buttonPosition}
         open={isOpen}
