@@ -1,2 +1,2 @@
 # landscaping-web
-Landscaping companie web app in React (NEXT.js)
+Landscaping company web app in React (NEXT.js)
