@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import BurgerButton from "@/components/BurgerButton/BurgerButton";
 import Logo from "@/components/Logo/Logo";
+import { menuLinks } from "@/data/menuLinks";
 
 const defaultButtonPosition = "mr-10";
 const openButtonPosition = "fixed top-9 right-10 z-50";
 
 interface MobileMenuProps {
-  menuItems: { name: string; url: string }[];
   className?: string;
 }
 
-export default function MobileMenu({ menuItems, className }: MobileMenuProps) {
+export default function MobileMenu({ className }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonPosition, setButtonPosition] = useState(defaultButtonPosition);
 
@@ -53,9 +53,9 @@ export default function MobileMenu({ menuItems, className }: MobileMenuProps) {
           >
             <Logo className="fixed top-16 max-w-48" />
             <nav className="flex flex-col justify-items-center text-dark text-2xl">
-              {menuItems !== null &&
-                menuItems?.length > 0 &&
-                menuItems.map((item) => (
+              {menuLinks !== null &&
+                menuLinks?.length > 0 &&
+                menuLinks.map((item) => (
                   <a
                     key={item.name}
                     href={item.url}

@@ -3,12 +3,14 @@ import Link from "next/link";
 
 interface NavigationProps {
   className?: string;
+  growthDirection?: "horizontal" | "vertical";
+  gapSize?: "gap-0" | "gap-2" | "gap-4" | "gap-6" | "gap-8" | "gap-10";
 }
 
-export default function Navigation({ className = "" }: NavigationProps) {
+export default function Navigation({ className = "", growthDirection = "vertical", gapSize = "gap-0" }: NavigationProps) {
   return (
-    <nav>
-      <ul className={`p-4 ${className}`}>
+    <nav className={`p-4 ${className}`}>
+      <ul className={`flex ${growthDirection === "horizontal" ? "flex-row" : "flex-col"} ${gapSize}`}>
         {menuLinks !== null &&
           menuLinks?.length > 0 &&
           menuLinks.map((link) => (

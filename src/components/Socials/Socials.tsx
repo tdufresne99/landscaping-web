@@ -1,21 +1,27 @@
 import { socialsLinks } from "@/data/socialsLinks";
 import Link from "next/link";
 
+interface SocialsProps {
+  className?: string;
+  growthDirection?: "horizontal" | "vertical";
+  gapSize?: "gap-2" | "gap-4" | "gap-6" | "gap-8" | "gap-10";
+  showTitle?: boolean;
+}
 
-const Socials = () => {
-    return (
-    <div className="text-background flex items-center w-full h-16 pl-3">
-        <h3 className="text-xl font-semibold basis-1/2">Nous suivre</h3>
-        <div className="flex gap-4">
-          {socialsLinks.map(({ name, url, icon: Icon }) => (
-            <Link
-              key={name}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-dark hover:text-accent text-2xl"
-            >
-              {Icon && <Icon className="w-10 h-10" />}
+const Socials = ({ className, growthDirection = "horizontal", gapSize = "gap-4", showTitle = true }: SocialsProps) => {
+  return (
+    <div className={`text-background flex items-center ${className}`}>
+      {showTitle && <h3 className="text-xl font-semibold basis-auto pr-8">Nous suivre</h3>}
+      <div className={`flex ${growthDirection === "horizontal" ? "flex-row" : "flex-col"} ${gapSize}`}>
+        {socialsLinks.map(({ name, url, icon: Icon }) => (
+          <Link
+            key={name}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-dark hover:text-accent text-2xl"
+          >
+            {Icon && <Icon className="w-10 h-10" />}
             </Link>
           ))}
         </div>
