@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import BurgerButton from "@/components/BurgerButton/BurgerButton";
 import Logo from "@/components/Logo/Logo";
 import { menuLinks } from "@/data/menuLinks";
+import Navigation from "@/components/Navigation/Navigation";
 
 const defaultButtonPosition = "mr-10";
 const openButtonPosition = "fixed top-9 right-10 z-50";
@@ -52,7 +53,7 @@ export default function MobileMenu({ className }: MobileMenuProps) {
             }}
           >
             <Logo className="fixed top-16 max-w-48" />
-            <nav className="flex flex-col justify-items-center text-dark text-2xl">
+            {/* <nav className="flex flex-col justify-items-center text-dark text-2xl">
               {menuLinks !== null &&
                 menuLinks?.length > 0 &&
                 menuLinks.map((item) => (
@@ -64,7 +65,15 @@ export default function MobileMenu({ className }: MobileMenuProps) {
                     {item.name}
                   </a>
                 ))}
-            </nav>
+            </nav> */}
+            <Navigation
+              className="items-center"
+              itemsPosition="center"
+              growthDirection="vertical"
+              gapSize="gap-4"
+              isAnimated={false}
+              listItemClassName="w-full mt-8 text-center text-dark text-2xl hover:text-accent transition-colors duration-150"
+            />
           </motion.div>
         )}
       </AnimatePresence>

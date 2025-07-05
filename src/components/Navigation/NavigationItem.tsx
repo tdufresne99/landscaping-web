@@ -6,11 +6,13 @@ interface NavigationItemProps {
   href: string;
   name: string;
   isAnimated?: boolean;
+  className?: string;
 }
 
 export default function NavigationItem({
   href,
   name,
+  className = "",
   isAnimated = false,
 }: NavigationItemProps) {
   const pathname = usePathname();
@@ -18,12 +20,12 @@ export default function NavigationItem({
 
   return (
     <li
-      className={`w-fit px-4 pt-2 transition-all duration-50 ${
+      className={`w-fit ${className} pt-2 transition-all duration-50 ${
         isAnimated
           ? isActive
-            ? "border-t-4 border-accent"
-            : "hover:border-t-4 hover:border-accent border-transparent"
-          : "underline"
+            ? "px-4 border-t-4 border-accent"
+            : "px-4 hover:border-t-4 hover:border-accent border-transparent"
+          : ""
       }`}
     >
       <Link href={href}>{name}</Link>

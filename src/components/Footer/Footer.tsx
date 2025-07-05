@@ -10,7 +10,7 @@ const Footer = () => {
         <Logo dark={false} className="max-w-40" />
       </div>
       <Socials className="w-full h-16 pl-3" />
-      <Navigation className="text-background" />
+      <Navigation listItemClassName="text-background underline" />
       <Contact className="mt-6"/>
     </footer>
   );
