@@ -9,7 +9,7 @@ interface ContactProps {
 
 const Contact = ({ className, growthDirection = "vertical", showTitle = true, gapSize = "gap-2" }: ContactProps) => {
   return (
-    <div className={`text-background pl-3 ${className}`}>
+    <div className={`text-background ${className}`}>
       {showTitle && <h3 className="text-xl font-semibold pb-3">Nous contacter</h3>}
       <div className={`flex ${growthDirection === "horizontal" ? "flex-row" : "flex-col"} ${gapSize}`}>
         {contactInfos.map(({ type, value, icon: Icon }) => (

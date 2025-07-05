@@ -13,7 +13,7 @@ const Logo = ({ className = "max-w-32", dark = true }: LogoProps) => {
     <Image
       src={dark? DarkLogoImage : LightLogoImage}
       alt="ÉcoHarmonie Paysages Logo"
-      className={`p-3 ${className}`}
+      className={`py-3 ${className}`}
       priority
     />
   );

@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={roboto.className}>
-      <body>
-        <Header />
-        {children}
+      <body className="bg-background">
+        <Header className=""/>
+        <div className="lg:mx-32">{children}</div>
         {/* <div className="flex flex-col items-center justify-center min-h-screen bg-light">
           <div className="bg-background w-full h-16 border-black border-1 flex items-center justify-center"><p className="text-center text-foreground">background</p></div>
           <div className="bg-foreground w-full h-16 border-black border-1 flex items-center justify-center"><p className="text-center text-background">foreground</p></div>

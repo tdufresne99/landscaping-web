@@ -5,12 +5,12 @@ import Contact from "@/components/Contact/Contact";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-left justify-start bg-foreground p-4">
+    <footer className="px-6 flex flex-col items-left justify-start bg-foreground p-4">
       <div className="basis-full">
-        <Logo dark={false} className="max-w-40" />
+        <Logo dark={false} className="max-w-34" />
       </div>
-      <Socials className="w-full h-16 pl-3" />
-      <Navigation listClassName="flex-col" listItemClassName="text-background underline" />
+      <Socials className="w-full h-16" />
+      <Navigation className="pl-2" listClassName="flex-col" listItemClassName="text-background underline" />
       <Contact className="mt-6"/>
     </footer>
   );
