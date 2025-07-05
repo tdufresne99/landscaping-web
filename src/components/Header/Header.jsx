@@ -24,10 +24,10 @@ const Header = ({}) => (
         <Logo className="max-w-32 lg:max-w-48" />
       </div>
       <Navigation
-        growthDirection="horizontal"
-        gapSize="gap-10"
         isAnimated={true}
         className="hidden lg:block w-full justify-items-center"
+        listClassName="gap-4"
+        listItemClassName="text-foreground font-bold"
       />
       <MobileMenu className="lg:hidden" />
     </div>

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import BurgerButton from "@/components/BurgerButton/BurgerButton";
 import Logo from "@/components/Logo/Logo";
-import { menuLinks } from "@/data/menuLinks";
 import Navigation from "@/components/Navigation/Navigation";
 
 const defaultButtonPosition = "mr-10";
@@ -47,33 +46,20 @@ export default function MobileMenu({ className }: MobileMenuProps) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-40%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 bg-gradient-to-b from-background/0 to-background backdrop-blur-sm flex flex-col items-center justify-center z-40"
+            className="fixed inset-0 bg-gradient-to-b from-background/0 to-background backdrop-blur-sm z-40"
             onAnimationStart={() => {
               setButtonPosition(openButtonPosition);
             }}
           >
-            <Logo className="fixed top-16 max-w-48" />
-            {/* <nav className="flex flex-col justify-items-center text-dark text-2xl">
-              {menuLinks !== null &&
-                menuLinks?.length > 0 &&
-                menuLinks.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.url}
-                    className="block mt-8 text-center text-dark hover:text-accent transition-colors duration-150"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-            </nav> */}
-            <Navigation
-              className="items-center"
-              itemsPosition="center"
-              growthDirection="vertical"
-              gapSize="gap-4"
-              isAnimated={false}
-              listItemClassName="w-full mt-8 text-center text-dark text-2xl hover:text-accent transition-colors duration-150"
-            />
+            <div className="mt-8 flex flex-wrap flex-col items-center justify-center z-40" >
+              <Logo className="max-w-48" />
+              <Navigation
+                className=""
+                listClassName="flex-col"
+                isAnimated={false}
+                listItemClassName="w-full mt-8 grow text-center text-dark text-2xl hover:text-accent transition-colors duration-150"
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
