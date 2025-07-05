@@ -5,13 +5,17 @@ import Contact from "../Contact/Contact";
 import Socials from "../Socials/Socials";
 import Navigation from "../Navigation/Navigation";
 
-const Header = ({
-}) => (
+const Header = ({}) => (
   <header>
     {/* Top Section */}
     <div className="hidden lg:flex lg:p-6 bg-foreground">
       <div className="basis-1/4"></div>
-      <Contact growthDirection="horizontal" gapSize="gap-10" showTitle={false} className="flex justify-center items-center font-extrabold basis-2/4"/>
+      <Contact
+        growthDirection="horizontal"
+        gapSize="gap-10"
+        showTitle={false}
+        className="flex justify-center items-center font-extrabold basis-2/4"
+      />
       <Socials className="basis-1/4" />
     </div>
     {/* Bottom Section */}
@@ -19,7 +23,12 @@ const Header = ({
       <div className="flex items-center ml-4">
         <Logo className="max-w-32 lg:max-w-48" />
       </div>
-      <Navigation growthDirection="horizontal" gapSize="gap-10" className="hidden lg:block w-full justify-items-center" />
+      <Navigation
+        growthDirection="horizontal"
+        gapSize="gap-10"
+        isAnimated={true}
+        className="hidden lg:block w-full justify-items-center"
+      />
       <MobileMenu className="lg:hidden" />
     </div>
   </header>
