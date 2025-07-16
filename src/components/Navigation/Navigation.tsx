@@ -1,7 +1,5 @@
 import { menuLinks } from "@/data/menuLinks";
-import Link from "next/link";
 import NavigationItem from "./NavigationItem";
-import { JSX } from "react";
 
 interface NavigationProps {
   className?: string;
