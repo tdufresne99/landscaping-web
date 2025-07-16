@@ -18,7 +18,7 @@ interface CallToActionProps {
     | "link"
     | "dark"
     | "light";
-  buttonSize?: "default" | "sm" | "lg" | "icon";
+  buttonSize?: "default" | "sm" | "lg" | "xlg" | "icon";
 }
 
 export default function CallToAction({
@@ -31,8 +31,8 @@ export default function CallToAction({
   buttonSize = "default",
 }: CallToActionProps) {
   return (
-    <div className={`py-4 px-8 flex flex-col ${className}`}>
-      <h2 className="text-lg font-semibold mb-4">{title}</h2>
+    <div className={`flex flex-col justify-center ${className}`}>
+      <h2 className="text-lg lg:text-2xl font-semibold mb-4">{title}</h2>
       {subtitle && <p className="text-md mb-6">{subtitle}</p>}
       <div>
         <Link href={buttonLink}>

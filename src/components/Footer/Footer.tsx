@@ -5,7 +5,7 @@ import Contact from "@/components/Contact/Contact";
 
 const Footer = () => {
   return (
-    <footer className="px-6 flex flex-col items-left justify-start bg-foreground p-4">
+    <footer className="px-6 lg:px-32 flex flex-col items-left justify-start bg-foreground p-4">
       <div className="basis-full">
         <Logo dark={false} className="max-w-34" />
       </div>

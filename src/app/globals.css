@@ -9,6 +9,7 @@
   --color-theme-primary: oklch(0.436 0.0743 127.35); /* var(--color-theme-primary) */
   --color-theme-secondary: oklch(0.4452 0.0477 126.51); /* var(--color-theme-secondary) */
   --color-theme-accent: oklch(0.496 0.186 27.42); /* var(--color-theme-accent) */
+  --color-theme-semiLight: oklch(0.9 0.0125 75.37); /* var(--color-theme-semiLight) */
 }
 
 html,

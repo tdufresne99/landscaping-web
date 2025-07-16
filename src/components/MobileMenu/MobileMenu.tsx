@@ -57,7 +57,7 @@ export default function MobileMenu({ className }: MobileMenuProps) {
                 className=""
                 listClassName="flex-col"
                 isAnimated={false}
-                listItemClassName="w-full mt-8 grow text-center text-dark text-2xl hover:text-accent transition-colors duration-150"
+                listItemClassName="w-full mt-8 text-center text-dark text-2xl hover:text-accent transition-colors duration-150"
               />
             </div>
           </motion.div>

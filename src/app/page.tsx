@@ -36,8 +36,7 @@ export default function Home() {
         imageSrc={HeroImage}
         imageAlt="landscaping"
         title={heroTitle}
-        height="h-64"
-        textJustify="justify-start"
+        height="h-64 lg:h-158"
       />
       <CallToAction
         title={contactAction.title}
@@ -45,18 +44,20 @@ export default function Home() {
         buttonLink={contactAction.link}
         buttonVariant="light"
         buttonSize="lg"
+        className="shadow-xl text-theme-light text-center bg-theme-dark justify-self-center lg:w-3/4 lg:mt-1 h-48 p-8 lg:p-24"
       />
-      <div>
+      <div className="lg:flex lg:mt-1 shadow-md">
         <CallToAction
           title={servicesAction.title}
           subtitle={servicesAction.subtitle}
           buttonLabel={servicesAction.buttonLabel}
           buttonLink={servicesAction.link}
-          className="text-theme-dark text-left bg-theme-light"
+          className="text-theme-dark text-left bg-theme-semiLight lg:grow p-8 lg:p-40 lg:mr-1"
           buttonVariant="dark"
           buttonSize="lg"
         />
-        <Image src={WorkingImage} alt="working" className="w-full brightness-90" priority/>
+        <div className="basis-1/2"><Image src={WorkingImage} alt="working" className="brightness-80 object-cover min-h-full" priority /></div>
+
       </div>
       <div className="flex flex-wrap justify-center items-center p-8 bg-light">
         <IconCard
